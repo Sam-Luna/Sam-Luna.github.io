@@ -1,2 +1,1 @@
-# JavaProjects
-This repository contains my java projects.
+This repository is used to create a personal resume website. 
