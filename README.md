@@ -1,1 +1,1 @@
-This repository is used to create a personal resume website. 
+This repository is used to create a personal resume website using HTML and CSS. 

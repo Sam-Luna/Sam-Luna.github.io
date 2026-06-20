@@ -1,3 +1,94 @@
+/*navigation bar, dropdown and dropdown-content*/
+@keyframes nav-animation {
+    from{}
+    to{}
+}
+.nav-menu {
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(50px); /*TODO: this blurs the background of the navbar*/
+    border-radius: 10px;
+
+    justify-content: center;
+
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+.nav-list{
+    list-style-type: none;
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    gap: 5rem;
+    display: flex;
+}
+.main-nav{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+
+    padding: 0px 50px;
+    display: inline-block;
+    position: relative;
+}
+
+h1{
+    background-color: rgb(163 116 214 / 0.91);
+    color: white;
+    border-radius: 15px;
+    padding: 0px 25px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav-list:hover .left-nav{
+    visibility: visible;
+}
+.nav-list:hover .right-nav{
+    visibility: visible;
+}
+
+/*FIXME: mergege left and right navs if needed*/
+.left-nav{
+    display: flex;
+    visibility: hidden;
+    align-items: center;
+}
+
+.right-nav{
+    display: flex;
+    visibility: hidden;
+    align-items: center;
+}
+
+.left-nav a:hover{
+    background-color: rgb(146 99 198 / 0.77);
+}
+.right-nav a:hover{
+    background-color: rgb(146 99 198 / 0.77);
+}
+
+.left-nav a{
+    background-color: #a374d6;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 15px;
+}
+.right-nav a{
+    background-color: #a374d6;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* Dynamic Background */
 @keyframes move {
     100% {
         transform: translate3d(0, 0, 1px) rotate(360deg);
@@ -12,6 +103,7 @@
     left: 0;
     background: #a374d6;
     overflow: hidden;
+    z-index: -1;
 }
 
 .background span {
