@@ -66,11 +66,20 @@
     <!-- MOBILE Navigation Menu -->
     <nav class = "mobile-nav-menu">
 
-        <header><h1>Samantha Luna</h1>
-            <input type="checkbox" class="dropdown" id="dropdown-button" value="menu">
-            <label for ="dropdown-button" class="display-dropdown"> &#9776; </label>
-            </input>
-        </header>
+        <div class="nav-menu">
+            <header>
+                <h1>Samantha Luna</h1>
+                <input type="checkbox" class="dropdown-button" id="dropdown-button" value="menu">
+                <label for ="dropdown-button" class="display-dropdown-button"> &#9776; </label>
+
+                <ul class = "hidden-menu">
+                    <li class = "hidden-item"><a href = "#about"> ABOUT ME </a></li>
+                    <li class = "hidden-item"><a href = "#projects"> PROJECTS </a></li>
+                    <li class = "hidden-item"><a href = "#resume"> RESUME </a></li>
+                    <li class = "hidden-item"><a href = "#contact"> CONTACT </a></li>
+                </ul>
+            </header>
+        </div>
 
         <ul class = "nav-list">
             <li class = "nav-item"><a href = "#about"> ABOUT ME </a></li>
@@ -78,6 +87,8 @@
             <li class = "nav-item"><a href = "#resume"> RESUME </a></li>
             <li class = "nav-item"><a href = "#contact"> CONTACT </a></li>
         </ul>
+
+        <p class = "scroll"> scroll <br> &darr;</p>
 
     </nav>
 

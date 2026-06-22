@@ -74,78 +74,106 @@
         margin: 0rem;
         width: 100%;
     }
-
-    header{
-        background-color: rgb(163 116 214 / 0.72);
+    .nav-menu{
         display: flex;
-        border-radius: 1rem;
-        margin-top: 35vh;
-        margin-bottom: 1rem;
-        justify-content: center;
-        align-items: center;
         position: sticky;
         top: 0;
         z-index: 10;
+        margin-top: 35vh;
 
         animation: header-shrink 10s ease-in-out 1s 1 normal forwards;
+    }
+    header{
+        background-color: rgb(163 116 214 / 0.84);
+        display: flex;
+        border-radius: 1rem;
+        margin-bottom: 0;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
 
     }
     h1 {
+        display: inline-block;
         color: rgb(255 255 255 / 0.85);
         background-color: rgb(163 116 214 / 0);
         border-radius: 1rem;
         font-size: 1.5rem;
-        height: fit-content;
-
-        padding: 0rem 2rem;
+        padding: 0rem 1rem;
     }
+
+    .dropdown-button{
+        display: none;
+    }
+    .display-dropdown-button{
+        display: inline-block;
+        background-color: rgb(255 255 255 / 0.27);
+        color: white;
+        height: fit-content;
+        border-radius: 5px;
+        text-align: center;
+        width: 2rem;
+        padding: 2px;
+        cursor: pointer;
+    }
+    .display-dropdown-button:active {
+        background-color: rgb(128 86 187);
+    }
+    .hidden-menu{
+        display: none;
+        position: absolute;
+        list-style-type: none;
+        background-color: rgb(163 114 230);
+        border-radius: 1rem;
+        z-index: 9;
+        justify-items: flex-start;
+        top: 2.6rem;
+        right: 0rem;
+    }
+    .dropdown-button:checked ~ .hidden-menu{
+        display: block;
+    }
+    .hidden-item a{
+        display: block;
+        text-decoration: none;
+        color: white;
+        margin: 1rem 2rem 1rem 0rem;
+    }
+
     .nav-list{
+        background-color: rgb(128 63 199 / 0);
         list-style-type: none;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        flex-basis: 10rem;
-        padding: 2rem 0rem;
+
+        padding-top: 8vh;
         opacity: 0;
-        animation: nav-list-animation 2s ease-in 10s 1 reverse forwards;
+        animation: nav-list-animation 2s ease-in 5s 1 reverse forwards;
 
     }
     .nav-item a{
+        background-color: rgb(220 192 236 / 0);
         color: white;
+        display: block;
         text-decoration: none;
+        font-size: 4vh;
+        padding: 4vh 0;
     }
-    /*
+
     .scroll{
         color: rgb(255 255 255 / 0);
         text-align: center;
-        background-color: rgb(127 255 212 / 0.53);
-        animation: scroll-sign 3s ease-in-out 0.5s 2 alternate;
+        animation: scroll-sign 5s ease-in-out 10s 2 alternate;
     }
 
     @keyframes scroll-sign {
-        from{color: rgb(255 255 255 / 0)}
-        to{color: rgb(255 255 255 / 0.47)}
-        100%{display: none}
-
-    TODO: i might not need this until I integrate javascript
-    ---- HTML CODE -----
-    <p class = "scroll"> scroll <br>
-            &darr;</p>
-
-    } */
-
-    .dropdown{
-        display: none;
-    }
-    .display-dropdown{
-        background-color: rgb(174 6 6 / 0.77);
-    }
-    .display-dropdown{
-        background-color: rgb(255 255 255 / 0.67);
-        border-radius: 5px;
-        width: 20px;
-        text-align: center;
+        from {
+            color: rgb(255 255 255 / 0)
+        }
+        to {
+            color: rgb(255 255 255 / 0.47)
+        }
     }
 
     /* ----ANIMATIONS ------*/
