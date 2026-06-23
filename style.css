@@ -1,5 +1,12 @@
 /* GLOBAL STYLES: apply to all screens*/
 
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
 /*  DYNAMIC BACKGROUND  */
 @keyframes move {
     100% { transform: translate3d(0, 0, 1px) rotate(360deg); }
@@ -60,19 +67,25 @@
 /* MOBILE Website View */
 @media(max-width:1023px){
 
+    /* 4. This guarantees content below the nav stays hidden below the fold
+    TODO: for smooth scrolling
+    main {
+        width: 100%;
+        min-height: 100dvh;
+    }*/
     .desktop-nav-menu{display: none;}
-
-    .content-wrapper{
-        display: flex;
-        align-items: center;
-    }
-
+    /*FIXME: might be able to fix navbar by removing mobile-nav-menu section. -- oops*/
     .mobile-nav-menu{
+        background-color: rgb(255 255 255 / 0.15);
+        padding: 2rem 2rem;
+        margin: 0;
+        height: 100dvh;
+
+        padding-top: env(safe-area-inset-top, 20px);
+        padding-bottom: env(safe-area-inset-bottom, 20px);
+
         display: flex;
         flex-direction: column;
-        padding: 2rem 2rem;
-        margin: 0rem;
-        width: 100%;
     }
     .nav-menu{
         display: flex;
@@ -80,16 +93,17 @@
         top: 0;
         z-index: 10;
         margin-top: 35vh;
-
-        animation: header-shrink 10s ease-in-out 1s 1 normal forwards;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0;
+        animation: header-shrink 3s ease-in-out 1s 1 normal forwards;
     }
     header{
-        background-color: rgb(163 116 214 / 0.84);
+        background-color: rgb(163 116 214);
         display: flex;
         border-radius: 1rem;
         margin-bottom: 0;
         width: 100%;
-        justify-content: center;
         align-items: center;
 
     }
@@ -115,6 +129,8 @@
         width: 2rem;
         padding: 2px;
         cursor: pointer;
+        margin-left: auto;
+        margin-right: 2vw;
     }
     .display-dropdown-button:active {
         background-color: rgb(128 86 187);
@@ -123,11 +139,11 @@
         display: none;
         position: absolute;
         list-style-type: none;
-        background-color: rgb(163 114 230);
+        background-color: rgb(163 116 214);
         border-radius: 1rem;
         z-index: 9;
         justify-items: flex-start;
-        top: 2.6rem;
+        top: 2.8rem;
         right: 0rem;
     }
     .dropdown-button:checked ~ .hidden-menu{
@@ -135,6 +151,7 @@
     }
     .hidden-item a{
         display: block;
+        font-size: clamp(16px, 3vw, 24px);
         text-decoration: none;
         color: white;
         margin: 1rem 2rem 1rem 0rem;
@@ -147,7 +164,7 @@
         flex-direction: column;
         align-items: center;
 
-        padding-top: 8vh;
+        padding: 8vh 0vh 0vh 0vh;
         opacity: 0;
         animation: nav-list-animation 2s ease-in 5s 1 reverse forwards;
 
@@ -157,7 +174,7 @@
         color: white;
         display: block;
         text-decoration: none;
-        font-size: 4vh;
+        font-size: clamp(16px, 4vw, 40px);
         padding: 4vh 0;
     }
 
