@@ -1,0 +1,177 @@
+/*  DESKTOP Website View */
+@media(min-width: 1024px){
+
+    .mobile-nav-menu{display: none;}
+
+    /*navigation bar and popup content -- desktop*/
+    .desktop-nav-menu {
+        display: flex;
+        justify-content:center;
+        border-radius: 10px;
+        position: sticky !important;
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(50px); /*TODO: this blurs the background of the navbar*/
+    }
+    .nav-list{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        gap: 5rem;
+        display: flex;
+    }
+
+    .nav-list:hover .left-nav a{
+        background-color: #a374d6;
+        color: white;
+        font-size: 25px;
+    }
+    .nav-list:hover .right-nav a{
+        background-color: #a374d6;
+        color: white;
+        font-size: 25px;
+    }
+    /*FIXME: mergege left and right navs if needed to make code more readable*/
+    .left-nav{
+        display: flex;
+        align-items: center;
+    }
+
+    .right-nav{
+        display: flex;
+        align-items: center;
+    }
+
+    .left-nav a{
+        background-color: rgb(163 116 214 / 0);
+        color: rgb(255 255 255 / 0);
+        text-decoration: none;
+        font-size: 1px;
+        padding: 15px;
+        border-radius: 15px;
+
+        transition-property: all;
+        transition-duration: 1.2s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .right-nav a{
+        background-color: rgb(163 116 214 / 0);
+        color: rgb(255 255 255 / 0);
+        text-decoration: none;
+        font-size: 1px;
+        padding: 15px;
+        border-radius: 15px;
+
+        transition-property: all;
+        transition-duration: 1.2s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .nav-list .left-nav a:hover{
+        background-color: rgb(128 86 187 / 0.76);
+    }
+    .nav-list .right-nav a:hover{
+        background-color: rgb(128 86 187 / 0.76);
+    }
+
+    .main-nav{
+        color: white;
+        text-align: center;
+        font-size: 25px;
+
+        padding: 0px 50px;
+        display: inline-block;
+        position: relative; /*TODO: be careful when creating the website experience*/
+    }
+
+    h1{
+        background-color: rgb(163 116 214 / 0);
+        color: rgb(255 255 255 / 0.85);
+        border-radius: 15px;
+        padding: 0px 25px;
+
+        transition-property: color;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.5s;
+    }
+
+    h1:hover{
+        color: rgb(163 116 214 / 0.78);
+    }
+
+    a{
+        text-decoration: none;
+    }
+}
+
+/* MOBILE Website View */
+@media(max-width:1023px){
+
+    .desktop-nav-menu{display: none;}
+    .mobile-nav-menu{
+        background-color: rgb(163 116 214 / 0.97);
+        display: flex;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0px;
+        border-radius: 1rem;
+        margin-bottom: 0;
+        width: 100dvw;
+        align-items: center;
+    }
+
+    h1 {
+        display: inline-block;
+        color: rgb(255 255 255 / 0.85);
+        background-color: rgb(163 116 214 / 0);
+        border-radius: 1rem;
+        font-size: 1.5rem;
+        padding: 0rem 1rem;
+    }
+
+    .dropdown-button{
+        display: none;
+    }
+    .display-dropdown-button{
+        display: inline-block;
+        background-color: rgb(255 255 255 / 0.27);
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        width: 2rem;
+        padding: 2px;
+        margin-left: auto;
+        margin-right: 2vw;
+    }
+    .display-dropdown-button:active {
+        background-color: rgb(128 86 187);
+    }
+    .hidden-menu{
+        display: none;
+        position: absolute;
+        list-style-type: none;
+        background-color: rgb(163 116 214);
+        border-radius: 1rem;
+        z-index: 9;
+        justify-items: flex-start;
+        top: 2.8rem;
+        right: 0rem;
+    }
+    .dropdown-button:checked ~ .hidden-menu{
+        display: block;
+    }
+    .hidden-item a{
+        display: block;
+        font-size: clamp(16px, 3vw, 24px);
+        text-decoration: none;
+        color: white;
+        margin: 1rem 2rem 1rem 0rem;
+    }
+    .hidden-item a:active{
+        background-color: rgb(163 116 214);
+    }
+}
