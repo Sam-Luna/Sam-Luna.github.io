@@ -13,12 +13,13 @@
     top: 0;
     left: 0;
     background: #edddfb;
-    overflow: hidden;
+    overflow: visible !important; 
 }
 
 .background span {
     width: 50vmin;
     height: 50vmin;
+    border: 2px solid red !important; 
     border-radius: 50vmin;
     backface-visibility: hidden;
     position: absolute;
