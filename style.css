@@ -35,8 +35,8 @@ body{
 
 /* #HOME section*/
     #home{
-        justify-content: flex-end;
-        height: 90dvh;
+        justify-content: center;
+        height: 100dvh;
         overflow: hidden;
     }
     .header {
