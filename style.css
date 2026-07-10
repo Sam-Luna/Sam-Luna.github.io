@@ -10,65 +10,80 @@ body{
     height: 100%;
 }
 /*Google Fonts*/
+.fredoka-bubbly {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
 @media(max-width:1023px) {
-    .fredoka-bubbly {
-        font-family: "Fredoka", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: normal;
-        font-variation-settings: "wdth" 100;
-    }
 
 
     section[id] {
-        padding-top: 2rem;
-        max-height: 100dvh;
-        min-height: 70dvh;
-        justify-items: center;
-        align-content: center;
+        display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-
+        padding-top: 1rem;
+        align-items: center;
+    }
+    p {
+        font-family: Fredoka, cursive;
+        text-align: center;
     }
 
-/* HOME section*/
+/* #HOME section*/
+    #home{
+        justify-content: flex-end;
+        height: 90dvh;
+        overflow: hidden;
+    }
     .header {
-        display: block;
-        justify-items: center;
+        display: flex;
+        flex-direction: column;
         text-align: center;
         background-color: rgb(185 142 243 / 0.66);
         border-radius: 1rem;
-        border: 2px solid #020205;
+        border: 4px solid #020205;
         box-shadow: 10px 10px black;
-        width: 80cqw;
-        height: 50%;
-        margin-top: 20% !important;
+        width: clamp(10rem, 85%, 800px);
+        height: 20rem;
+        align-items: center;
+        overflow: hidden;
     }
 
-    .header p {
-        font-size: 2rem;
-        font-family: Fredoka, cursive;
-    }
-
-    h1 {
+    .containsName {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         background-color: rgb(255 255 255 / 0.89);
         color: rgb(2 2 5);
-        font-size: clamp(50%, 5dvw, 200px);
-        font-family: Fredoka, cursive;
-        border: 1px solid #020205;
+        border: 2px solid #020205;
         border-radius: 1rem;
-        width: 50cqw;
-        height: 20cqw;
+        margin-bottom: .5rem;
+        width: 95%;
+        height: 13rem;
+        overflow: hidden;
     }
-
-    #home p {
-        text-align: center;
+    h1{
+        font-size: 3.5rem;
         font-family: Fredoka, cursive;
-        margin: 2rem;
     }
+    .hello{
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin: 2rem auto 5px auto;
+    }
+    .myNameIs{
+        margin: 0 auto 2rem auto;
+        font-weight: bold;
+    }
+    #home > p{
+        font-size: clamp(18px, 3dvw, 5vw);
+        padding: 2rem 4rem 3rem 4rem;
+        font-weight: bold;
 
-    p {
-        font-size: clamp(16px, 2.5dvw, 4vw);
-        text-align: center;
     }
 }

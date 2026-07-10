@@ -121,7 +121,7 @@
         border-radius: 1rem;
         margin-bottom: 0;
         align-items: center;
-        height: 3rem;
+        height: 4rem;
     }
 
     .nav-name{
@@ -154,11 +154,11 @@
         display: none;
         position: absolute;
         list-style-type: none;
-        background-color: rgb(163 116 214);
+        background-color: rgb(163 116 214 / 0.86);
         border-radius: 1rem;
         z-index: 9;
         justify-items: flex-start;
-        top: 2.3rem;
+        top: 3rem;
         right: 0rem;
     }
     .dropdown-button:checked ~ .hidden-menu{
