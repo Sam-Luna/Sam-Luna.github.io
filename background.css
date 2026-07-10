@@ -19,7 +19,6 @@
 .background span {
     width: 50vmin;
     height: 50vmin;
-    border: 2px solid red !important; 
     border-radius: 50vmin;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
