@@ -24,7 +24,7 @@
     backface-visibility: hidden;
     position: absolute;
     animation: move;
-    animation-duration: 47;
+    animation-duration: 47s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
