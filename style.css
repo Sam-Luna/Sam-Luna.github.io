@@ -9,6 +9,7 @@ body, html{
     padding: 0;
     width: 100%;
     min-height: 100dvh;
+    scroll-padding-top: 4rem;
 }
 /*Google Fonts*/
 .fredoka-bubbly {
@@ -21,14 +22,55 @@ body, html{
 
 @media(max-width:1023px){
 
-
+ /* Universal */
     section[id] {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        padding-top: 1rem;
         align-items: center;
-        margin-top: 3rem;
+        justify-content: center;
+        height: 100dvh;
+        overflow: hidden;
+    }
+    .tabBackground{
+        margin: 0;
+        background-color: rgb(185 142 243 / 0.75);
+        display: flex;
+        width: 100%;
+    }
+    .sectionTab {
+        background-color: rgb(185 142 243 / 0.75);
+        position: static;
+        align-self: flex-start;
+        margin-left: 5%;
+        height: 3rem;
+        width: clamp(5rem, 30%, 200px);
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        border-style: solid;
+        border-width: 3px;
+        border-color: rgb(2 2 5);
+        border-bottom: none;
+        align-content: center;
+    }
+    .sectionFolder{
+        background-color: rgb(185 142 243 / 0.75);
+        height: 100%;
+        width: 100%;
+        border-style: solid;
+        border-width: 3px;
+        border-radius: 10px;
+
+        border-bottom-style: none;
+        border-bottom-left-radius: 0rem;
+        border-bottom-right-radius: 0rem;
+    }
+
+    h2{
+        font-family: Fredoka, cursive;
+        font-size: clamp(16px, 1rem, 4vw);
+        align-content: center;
+        text-align: center;
     }
 
     p {
@@ -37,19 +79,14 @@ body, html{
     }
 
     /* #HOME section*/
-    #home {
-        justify-content: center;
-        height: 100dvh;
-        overflow: hidden;
-    }
     .welcomeTab{
         background-color: rgb(185 142 243 / 0.66);
         align-self: flex-start;
         margin-left: 12%;
         height: 3rem;
         width: clamp(5rem, 30%, 200px);
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
         border-style: solid;
         border-width: 4px;
         border-color: rgb(2 2 5);
@@ -60,6 +97,7 @@ body, html{
         align-content: center;
         text-align: center;
     }
+
     .header {
         display: flex;
         flex-direction: column;
@@ -114,77 +152,19 @@ body, html{
 
     }
 
-    /*about me*/
-    #about {
-        justify-content: center;
-        height: 100dvh;
-        overflow: hidden;
-        margin-bottom: 0;
-    }
-    h2{
-        font-family: Fredoka, cursive;
-        font-size: clamp(16px, 1rem, 4vw);
-        align-content: center;
-        text-align: center;
-    }
-    .aboutTab{
-        background-color: rgb(185 142 243 / 0.66);
-        position: static;
-        align-self: flex-start;
-        margin-left: 5%;
-        height: 3rem;
-        width: clamp(5rem, 30%, 200px);
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-        border-style: solid;
-        border-width: 3px;
-        border-color: rgb(2 2 5);
-        border-bottom: none;
+    /*ABOUT ME*/
 
-        align-content: center;
-    }
-    .aboutFolder{
-        background-color: rgb(185 142 243 / 0.66);
-        height: 100%;
-        width: 100%;
-        border-style: solid;
-        border-width: 3px;
-        border-radius: 1rem;
-    }
 
     /*PROJECTS*/
-    #projects {
-        justify-content: center;
-        height: 100dvh;
-        overflow: hidden;
+    #projectTab, #projectFolder{
+        background-color: rgb(128 86 187 / 0.88);
     }
-    h2{
-        font-family: Fredoka, cursive;
-        font-size: clamp(16px, 1rem, 4vw);
-        align-content: center;
-        text-align: center;
+    /*SKILLS*/
+    #skillsTabBackground{
+        background-color: rgb(128 86 187 / 0.88);
     }
-    .projectTab{
-        background-color: rgb(185 142 243 / 0.66);
-        position: static;
-        align-self: flex-start;
-        margin-left: 5%;
-        height: 3rem;
-        width: clamp(5rem, 30%, 200px);
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-        border-style: solid;
-        border-width: 3px;
-        border-color: rgb(2 2 5);
-        border-bottom: none;
-        align-content: center;
-    }
-    .projectFolder{
-        background-color: rgb(128 86 187 / 0.44);
-        height: 100%;
-        width: 100%;
-        border-style: solid;
-        border-width: 3px;
-        border-radius: 1rem;
+    /*CONTACT ME*/
+    #contactTab, #contactFolder{
+        background-color: rgb(128 86 187 / 0.88);
     }
 }
