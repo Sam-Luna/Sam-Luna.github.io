@@ -10,7 +10,6 @@ body{
     width: 100%;
     height: 100svh;
     min-height: 100svh;
-    overscroll-behavior-y: none;
     overflow: hidden;
 }
 /*Google Fonts*/
