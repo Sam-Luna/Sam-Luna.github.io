@@ -19,7 +19,8 @@
     width: 50vmin;
     height: 50vmin;
     border-radius: 50vmin;
-    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
     position: absolute;
     animation: move;
     animation-duration: 45;
