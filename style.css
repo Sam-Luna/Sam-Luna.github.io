@@ -2,7 +2,7 @@
 @import url('background.css');/*navigation menus for desktop and mobile*/
 
 /* GLOBAL STYLES: apply to all screens*/
-body{
+body, html{
     display: flex;
     flex-direction: column;
     margin: 0;

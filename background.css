@@ -6,6 +6,7 @@
 }
 
 .background {
+    background: #eddefe;
     z-index: -1;
     position: fixed;
     display: block;
@@ -24,8 +25,7 @@
     width: 50vmin;
     height: 50vmin;
     border-radius: 50vmin;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+    backface-visibility: hidden;
     position: absolute;
     animation: move;
     animation-duration: 45;
