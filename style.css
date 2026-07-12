@@ -20,7 +20,7 @@ body, html{
     font-variation-settings: "wdth" 100;
 }
 
-@media(max-width:1023px){
+
 
  /* Universal */
     section[id] {
@@ -34,12 +34,13 @@ body, html{
     }
     .tabBackground{
         margin: 0;
-        background-color: rgb(185 142 243 / 0.75);
+        background-color: rgb(128 86 187 / 0.88);
         display: flex;
         width: 100%;
+        overflow: hidden;
     }
     .sectionTab {
-        background-color: rgb(185 142 243 / 0.75);
+        background-color: rgb(128 86 187 / 0.88);
         position: static;
         align-self: flex-start;
         margin-left: 5%;
@@ -54,7 +55,12 @@ body, html{
         align-content: center;
     }
     .sectionFolder{
-        background-color: rgb(185 142 243 / 0.75);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(128 86 187 / 0.88);
         height: 100%;
         width: 100%;
         border-style: solid;
@@ -64,6 +70,7 @@ body, html{
         border-bottom-style: none;
         border-bottom-left-radius: 0rem;
         border-bottom-right-radius: 0rem;
+        overflow: hidden;
     }
 
     h2{
@@ -76,6 +83,7 @@ body, html{
     p {
         font-family: Fredoka, cursive;
         text-align: center;
+        font-size: clamp(14px, 1rem, 3vw);
     }
 
     /* #HOME section*/
@@ -128,7 +136,7 @@ body, html{
     }
 
     h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
         font-family: Fredoka, cursive;
         align-content: center;
         text-align: center;
@@ -153,18 +161,44 @@ body, html{
     }
 
     /*ABOUT ME*/
+    .profilePicture{
+        display: flex;
+        height: auto;
+        width: calc(55% - 30px);
+        margin-top: 5%;
 
+        border: 1rem solid #f3f1f1;
+        border-bottom: 4rem solid #f3f1f1;
+    }
+    .stickyNote1{
+        background-color: #e5d9f6;
+        display: flex;
+        flex-direction: column;
+        height: 10rem;
+        width: 10rem;
+        border: 1px solid rgb(12 1 1);
+        box-shadow: 5px 5px #856ea5;
+        overflow: hidden;
+    }
+    .stickyNoteHeader1{
+        background-color: rgb(163 116 214 / 0.62);
+        height: 15%;
+        width: 100%;
+    }
+    .stickyNoteContent1{
+       margin: 10px;
+
+    }
 
     /*PROJECTS*/
     #projectTab, #projectFolder{
-        background-color: rgb(128 86 187 / 0.88);
+        background-color: rgb(185 142 243 / 0.75);
     }
     /*SKILLS*/
     #skillsTabBackground{
-        background-color: rgb(128 86 187 / 0.88);
+        background-color: rgb(185 142 243 / 0.75);
     }
     /*CONTACT ME*/
     #contactTab, #contactFolder{
-        background-color: rgb(128 86 187 / 0.88);
+        background-color: rgb(185 142 243 / 0.75);
     }
-}
